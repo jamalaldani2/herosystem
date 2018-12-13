@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "Kx";
+var prefix = "H";
 client.on('message', message => {
-var prefix = "Kx"
+var prefix = "H"
         if(message.content.startsWith(prefix + 'hypixel')) {
             let args = message.content.split(' ').slice(1).join(' ');
             if (!args) return message.channel.send("**رجأء ضع اسمك في ماين كرافت. ?**");
@@ -14,7 +14,7 @@ var prefix = "Kx"
 
 client.on("message", (message) => {
     /// ALPHA CODES
-   if (message.content.startsWith("Kxnew")) {     /// ALPHA CODES
+   if (message.content.startsWith("Hnew")) {     /// ALPHA CODES
         const reason = message.content.split(" ").slice(1).join(" ");     /// ALPHA CODES
         if (!message.guild.roles.exists("name", "Support Team")) return message.channel.send(`This server doesn't have a \`Support Team\` role made, so the ticket won't be opened.\nIf you are an administrator, make one with that name exactly and give it to users that should be able to see tickets.`);
         if (message.guild.channels.exists("name", "ticket-{message.author.id}" + message.author.id)) return message.channel.send(`You already have a ticket open.`);    /// ALPHA CODES
@@ -48,9 +48,9 @@ client.on("message", (message) => {
   if (message.content.startsWith("Kxclose")) {
         if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`You can't use the close command outside of a ticket channel.`);
  
-       message.channel.send(`Are you sure? Once confirmed, you cannot reverse this action!\nTo confirm, type \`Kxclose\`. This will time out in 10 seconds and be cancelled.`)
+       message.channel.send(`Are you sure? Once confirmed, you cannot reverse this action!\nTo confirm, type \`Hclose\`. This will time out in 10 seconds and be cancelled.`)
            .then((m) => {
-               message.channel.awaitMessages(response => response.content === 'Kxclose', {
+               message.channel.awaitMessages(response => response.content === 'Hclose', {
                        max: 1,
                        time: 10000,
                        errors: ['time'],
@@ -68,7 +68,7 @@ client.on("message", (message) => {
  
 });
 client.on("message", message => {
-    var prefix = "Kx";
+    var prefix = "H";
         if (message.author.id === client.user.id) return;
         if (message.guild) {
        let embed = new Discord.RichEmbed()
@@ -100,7 +100,7 @@ client.on("message", message => {
 
 client.on('message', message => {
 
-    if (message.content === "Kxmc") {
+    if (message.content === "Hmc") {
                         if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
@@ -111,7 +111,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' لي
                message.reply("تم تقفيل الشات  ")
            });
              }
-if (message.content === "Kxumc") {
+if (message.content === "Humc") {
     if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
@@ -129,7 +129,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
 
 
 client.on('message', function(message) {
-    if (message.content == "Kxclear") {
+    if (message.content == "Hclear") {
         if (message.member.hasPermission("MANAGE_MESSAGES")) {
             message.channel.fetchMessages()
                .then(function(list){
@@ -141,7 +141,7 @@ client.on('message', function(message) {
 });
 
 client.on("message", msg => {
-    var prefix = "Kx";
+    var prefix = "H";
 if(msg.content.startsWith (prefix + "id")) {
 if(!msg.channel.guild) return msg.reply('**❌ اسف لكن هذا الامر للسيرفرات فقط **');         
 const embed = new Discord.RichEmbed();
@@ -165,7 +165,7 @@ client.on('guildMemberAdd', member=> {
     });
 client.on('message', message => {
               if (!message.channel.guild) return;
-      if(message.content =='Kxmember')
+      if(message.content =='Hmember')
       var IzRo = new Discord.RichEmbed()
       .setThumbnail(message.author.iconURL)
       .setFooter(message.author.username, message.author.avatarURL)
@@ -178,7 +178,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-const prefix = "Kx";
+const prefix = "H";
   if (message.author.kick) return;
   if (!message.content.startsWith(prefix)) return;
 
@@ -361,17 +361,17 @@ if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return mess
 
 
 client.on('message', message => {
-            if (message.content.startsWith("Kxhelp")) {
+            if (message.content.startsWith("Hhelp")) {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .addField(' **  Public Commands - اوامر عامة  ** ')
-.addField('  ❖ ${prefix}bc{برودكاست} ')
-.addField('  ❖ ${prefix}ban{تبند حدا} ')
-.addField('  ❖ ${prefix}kick{كيك لاحدا} ')
-.addField('  ❖ ${prefix}mute{اسكات حدا} ')
-.addField('  ❖ ${prefix}unmute{جعل الشخص يحكي} ')
-.addField('  ❖ ${prefix}id{ظهور الid الخاص فيك} ')
-.addField('  ❖ ${prefix}member{لمعرفة عدد اشخاص السيرفر} ')
+.addField('  ❖ H}bc{برودكاست} ')
+.addField('  ❖ Hban{تبند حدا} ')
+.addField('  ❖ Hkick{كيك لاحدا} ')
+.addField('  ❖ Hmute{اسكات حدا} ')
+.addField('  ❖ Hunmute{جعل الشخص يحكي} ')
+.addField('  ❖ Hid{ظهور الid الخاص فيك} ')
+.addField('  ❖ Hmember{لمعرفة عدد اشخاص السيرفر} ')
 .setColor('#7d2dbe')
   message.channel.sendEmbed(embed);//Codes Server
     }
