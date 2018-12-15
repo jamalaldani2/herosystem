@@ -45,7 +45,7 @@ client.on("message", (message) => {
     }
  
  
-  if (message.content.startsWith("Kxclose")) {
+  if (message.content.startsWith("Hclose")) {
         if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`You can't use the close command outside of a ticket channel.`);
  
        message.channel.send(`Are you sure? Once confirmed, you cannot reverse this action!\nTo confirm, type \`Hclose\`. This will time out in 10 seconds and be cancelled.`)
